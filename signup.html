@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - NASA's Lens</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="page-signup">
+    <video autoplay muted loop id="myVideo">
+        <source src="bg.mp4" type="video/mp4">
+    </video>
+
+    <div class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="">
+            NASA's Lens
+        </div>
+        <div class="navbar-right">
+            <a href="index.html"><button>Login</button></a>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Sign Up</h2>
+        <form id="signupForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username" required>
+            <span id="username-error" style="color:red;"></span>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            <span id="email-error" style="color:red;"></span>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="At least 8 characters, 1 uppercase, 1 number" required>
+            <span id="password-error" style="color:red;"></span>
+
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Re-enter your password" required>
+            <span id="confirmPassword-error" style="color:red;"></span>
+
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
