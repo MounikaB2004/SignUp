@@ -19,21 +19,25 @@ document.getElementById('signupForm').addEventListener('submit', function(event)
 
     if (username === "" || /\d/.test(username)) {
         usernameError.textContent = "Please enter a valid username (letters only).";
+        usernameError.classList.add('error-message'); // Apply the CSS class
         isValid = false;
     }
 
     if (email === "" || !email.includes("@")) {
         emailError.textContent = "Please enter a valid email address.";
+        emailError.classList.add('error-message');
         isValid = false;
     }
 
     if (password === "" || password.length < 8 || !/[A-Z]/.test(password) || !/\d/.test(password)) {
-        passwordError.textContent = "Password must be at least 8 characters long, contain 1 uppercase letter, and 1 number.";
+        passwordError.textContent = "Password must be at least 8 characters long, contain an uppercase letter, and a number.";
+        passwordError.classList.add('error-message');
         isValid = false;
     }
 
     if (password !== confirmPassword) {
         confirmPasswordError.textContent = "Passwords do not match.";
+        confirmPasswordError.classList.add('error-message');
         isValid = false;
     }
 
@@ -57,11 +61,13 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
 
     if (email === "" || !email.includes("@")) {
         emailError.textContent = "Please enter a valid email address.";
+        emailError.classList.add('error-message');
         isValid = false;
     }
 
     if (password.trim() === "") {
         passwordError.textContent = "Please enter your password.";
+        passwordError.classList.add('error-message');
         isValid = false;
     }
 
